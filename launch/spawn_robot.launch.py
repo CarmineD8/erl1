@@ -98,7 +98,8 @@ def generate_launch_description():
              "/clock@rosgraph_msgs/msg/Clock[gz.msgs.Clock",
             "/cmd_vel@geometry_msgs/msg/Twist@gz.msgs.Twist",
             "/odom@nav_msgs/msg/Odometry@gz.msgs.Odometry",
-            "/joint_states@sensor_msgs/msg/JointState@gz.msgs.Model"
+            "/joint_states@sensor_msgs/msg/JointState@gz.msgs.Model",
+            "/tf@tf2_msgs/msg/TFMessage[gz.msgs.Pose_V"
         ],
         output="screen",
         parameters=[
