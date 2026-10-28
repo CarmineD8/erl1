@@ -1,5 +1,10 @@
+<?xml version='1.0'?>
+<!-- ArUco treasure hunt world.
+     The box models (aruco_box_1 ... aruco_box_4) must be in a folder listed in GZ_SIM_RESOURCE_PATH, e.g.
+     export GZ_SIM_RESOURCE_PATH=$GZ_SIM_RESOURCE_PATH:$HOME/gazebo_models
+     The robot is expected to start at the origin, facing +x (yaw = 0). -->
 <sdf version='1.10'>
-  <world name='empty'>
+  <world name='aruco_world'>
     <physics name='1ms' type='ignored'>
       <max_step_size>0.001</max_step_size>
       <real_time_factor>1</real_time_factor>
@@ -69,7 +74,7 @@
       <self_collide>false</self_collide>
     </model>
     <model name='aruco_box_1'>
-      <pose>4 -5.0008404079291459e-19 0.24999999571252884 2.0518087498855671e-18 -2.7661392658103217e-18 -1.870165668474396e-20</pose>
+      <pose>4 0 0.25 0 0 0</pose>
       <link name='link'>
         <inertial>
           <mass>1</mass>
@@ -106,7 +111,7 @@
         <visual name='aruco_box_mesh'>
           <geometry>
             <mesh>
-              <uri>file:///home/ubuntu/gazebo_models/aruco_box_1/model.dae</uri>
+              <uri>model://aruco_box_1/model.dae</uri>
               <scale>0.25 0.25 0.25</scale>
             </mesh>
           </geometry>
@@ -116,11 +121,11 @@
         <kinematic>false</kinematic>
         <pose>0 0 0 0 0 0</pose>
       </link>
-      <static>false</static>
+      <static>true</static>
       <self_collide>false</self_collide>
     </model>
     <model name='aruco_box_2'>
-      <pose>2.9999999999999996 -3.9999999999999987 0.24999999571252884 -6.069493112631867e-18 -7.3860176077379391e-18 -1.5699999999999998</pose>
+      <pose>3 -4 0.25 0 0 -1.5708</pose>
       <link name='link'>
         <inertial>
           <mass>1</mass>
@@ -157,7 +162,7 @@
         <visual name='aruco_box_mesh'>
           <geometry>
             <mesh>
-              <uri>file:///home/ubuntu/gazebo_models/aruco_box_2/model.dae</uri>
+              <uri>model://aruco_box_2/model.dae</uri>
               <scale>0.25 0.25 0.25</scale>
             </mesh>
           </geometry>
@@ -167,11 +172,11 @@
         <kinematic>false</kinematic>
         <pose>0 0 0 0 0 0</pose>
       </link>
-      <static>false</static>
+      <static>true</static>
       <self_collide>false</self_collide>
     </model>
     <model name='aruco_box_3'>
-      <pose>2.9999999999999996 5 0.25 -1.5358774173143895e-34 1.3870343475416034e-33 1.5700000000000001</pose>
+      <pose>3 5 0.25 0 0 1.5708</pose>
       <link name='link'>
         <inertial>
           <mass>1</mass>
@@ -208,7 +213,7 @@
         <visual name='aruco_box_mesh'>
           <geometry>
             <mesh>
-              <uri>file:///home/ubuntu/gazebo_models/aruco_box_3/model.dae</uri>
+              <uri>model://aruco_box_3/model.dae</uri>
               <scale>0.25 0.25 0.25</scale>
             </mesh>
           </geometry>
@@ -218,11 +223,11 @@
         <kinematic>false</kinematic>
         <pose>0 0 0 0 0 0</pose>
       </link>
-      <static>false</static>
+      <static>true</static>
       <self_collide>false</self_collide>
     </model>
     <model name='aruco_box_4'>
-      <pose>-1 4 0.25 1.3015073452304366e-33 1.0364253918400328e-36 3.1400000000000001</pose>
+      <pose>-1 4 0.25 0 0 3.1416</pose>
       <link name='link'>
         <inertial>
           <mass>1</mass>
@@ -259,7 +264,7 @@
         <visual name='aruco_box_mesh'>
           <geometry>
             <mesh>
-              <uri>file:///home/ubuntu/gazebo_models/aruco_box_4/model.dae</uri>
+              <uri>model://aruco_box_4/model.dae</uri>
               <scale>0.25 0.25 0.25</scale>
             </mesh>
           </geometry>
@@ -269,7 +274,7 @@
         <kinematic>false</kinematic>
         <pose>0 0 0 0 0 0</pose>
       </link>
-      <static>false</static>
+      <static>true</static>
       <self_collide>false</self_collide>
     </model>
     <light name='sun' type='directional'>
