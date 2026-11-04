@@ -22,7 +22,7 @@ def generate_launch_description():
     )
 
     world_arg = DeclareLaunchArgument(
-        'world', default_value='my_world.sdf',
+        'world', default_value='complex_world.sdf',
         description='Name of the Gazebo world file to load'
     )
 
@@ -124,7 +124,7 @@ def generate_launch_description():
         package="ros_gz_bridge",
         executable="parameter_bridge",
         arguments=[
-            "/clock@rosgraph_msgs/msg/Cloccd k[gz.msgs.Clock",
+            "/clock@rosgraph_msgs/msg/Clock[gz.msgs.Clock",
             "/cmd_vel@geometry_msgs/msg/Twist]gz.msgs.Twist",
             "/odom@nav_msgs/msg/Odometry[gz.msgs.Odometry",
             "/joint_states@sensor_msgs/msg/JointState[gz.msgs.Model",
@@ -133,7 +133,7 @@ def generate_launch_description():
             "/camera/camera_info@sensor_msgs/msg/CameraInfo[gz.msgs.CameraInfo",
             "/camera_joint/cmd_pos@std_msgs/msg/Float64]gz.msgs.Double",
             "/imu@sensor_msgs/msg/Imu[gz.msgs.IMU",
-           # "/scan@sensor_msgs/msg/LaserScan[gz.msgs.LaserScan",
+            "/scan@sensor_msgs/msg/LaserScan[gz.msgs.LaserScan",
            # "/scan/points@sensor_msgs/msg/PointCloud2[gz.msgs.PointCloudPacked",
            # "/camera/depth_image@sensor_msgs/msg/Image[gz.msgs.Image",
            # "/camera/points@sensor_msgs/msg/PointCloud2[gz.msgs.PointCloudPacked",
